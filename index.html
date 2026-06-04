@@ -220,4 +220,302 @@
           </div>
           <div class="brand-copy"><div class="brand-name">MN Collections</div><small>Earth-friendly lifestyle products</small></div>
         </div>
-        <p class="muted">A storefront demo generated from the 2026 catalogue. Use it as the base for Shopify migration, static hosting, or custom s
+        <p class="muted">A storefront demo generated from the 2026 catalogue. Use it as the base for Shopify migration, static hosting, or custom storefront deployment.</p>
+      </div>
+      <div>
+        <h3>Reach us</h3>
+        <p class="muted">Email: <a href="mailto:mncblr22@gmail.com">mncblr22@gmail.com</a><br>Phone: <a href="tel:+919538817071">+91 95388 17071</a><br>Instagram: <a href="https://instagram.com/mncollectionsblr22" target="_blank" rel="noopener noreferrer">@mncollectionsblr22</a></p>
+      </div>
+      <div>
+        <h3>Hosting next</h3>
+        <p class="muted">Upload this file to Netlify or Vercel, or use the content and data model to migrate into Shopify as a live store.</p>
+      </div>
+    </div>
+    <div class="container footer-note">Disclaimer: catalogue notes mention that products and specifications may change and should be confirmed before final publishing.</div>
+  </footer>
+
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-backdrop" data-close></div>
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-top">
+        <div>
+          <div class="tiny" id="drawerCategory"></div>
+          <h2 id="drawerTitle">Product</h2>
+        </div>
+        <button class="icon-btn" data-close aria-label="Close details">✕</button>
+      </div>
+      <div class="drawer-hero"><div class="product-blob"><span id="drawerEmoji">☕</span></div></div>
+      <p id="drawerDesc" class="muted"></p>
+      <div class="meta" id="drawerMeta" style="margin:1rem 0"></div>
+      <div class="card" style="padding:1rem 1.1rem;background:var(--color-surface)">
+        <h3>Ready for launch upgrades</h3>
+        <p class="muted">Add price, SKU, product images, inventory, and payment integration to convert this into a checkout-ready store.</p>
+      </div>
+      <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.25rem">
+        <a class="btn btn-primary" href="#bulk">Enquire for this product</a>
+        <a class="btn btn-secondary" href="mailto:mncblr22@gmail.com">Email us</a>
+      </div>
+    </div>
+  </aside>
+
+  <script>
+    const products = [
+      {name:'Round Tea Cup',category:'Drinkware',spec:'150ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Cutting Chai Cup',category:'Drinkware',spec:'90ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Duo Mug',category:'Drinkware',spec:'350ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Comfy Mug',category:'Drinkware',spec:'200ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Square Tea Cup',category:'Drinkware',spec:'150ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Statement Tea Cup',category:'Drinkware',spec:'120ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Majestic Mug',category:'Drinkware',spec:'400ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Comfy Mug with Lid',category:'Drinkware',spec:'200ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Wave Mug',category:'Drinkware',spec:'450ml, 250ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Statement Mug',category:'Drinkware',spec:'400ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Classic Mug',category:'Drinkware',spec:'300ml, 150ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Classic Mug with Lid',category:'Drinkware',spec:'300ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Classic Coffee Mug Mini',category:'Drinkware',spec:'150ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Retro Travel Cup',category:'Drinkware',spec:'350ml, 250ml',colors:'standard earthy shades',emoji:'🥤'},
+      {name:'Trio Mug',category:'Drinkware',spec:'400ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Dual Java Mug',category:'Drinkware',spec:'375ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Icon Mug',category:'Drinkware',spec:'350ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Rafter Mug with Lid',category:'Drinkware',spec:'350ml, 250ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Sippers with lid',category:'Drinkware',spec:'475ml, 360ml, 250ml',colors:'standard earthy shades',emoji:'🥤'},
+      {name:'Rafter Mug Without Lid',category:'Drinkware',spec:'350ml',colors:'standard earthy shades',emoji:'☕'},
+      {name:'Natural Sippers',category:'Drinkware',spec:'475ml, 360ml, 250ml',colors:'standard earthy shades',emoji:'🥤'},
+      {name:'Ecotide Bottle',category:'Drinkware',spec:'400ml',colors:'standard pastel shades',emoji:'🧴'},
+      {name:'Ecotide Bottle',category:'Drinkware',spec:'600ml',colors:'standard pastel shades',emoji:'🧴'},
+      {name:'Eco-spring Water Bottle',category:'Drinkware',spec:'1 Liter',colors:'standard earthy shades',emoji:'🧴'},
+      {name:'Tumbler',category:'Drinkware',spec:'assorted',colors:'standard earthy shades',emoji:'🥛'},
+      {name:'Statement Lassi tumbler',category:'Drinkware',spec:'350ml',colors:'standard earthy shades',emoji:'🥛'},
+      {name:'Kids Tumbler',category:'Drinkware',spec:'180ml',colors:'standard pastel shades',emoji:'🥛'},
+      {name:'Frosted Tumbler',category:'Drinkware',spec:'275ml',colors:'standard pastel shades',emoji:'🥛'},
+      {name:'Flute Tumbler',category:'Drinkware',spec:'350ml',colors:'standard earthy shades',emoji:'🥛'},
+      {name:'Econova Tumbler',category:'Drinkware',spec:'375ml',colors:'standard pastel shades',emoji:'🥛'},
+      {name:'Wine Glass',category:'Drinkware',spec:'200ml',colors:'standard earthy shades',emoji:'🍷'},
+      {name:'Statement bowl',category:'Tableware',spec:'550ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'Soup bowl',category:'Tableware',spec:'300ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'Elara bowl',category:'Tableware',spec:'275ml, 600ml, 1000ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'Multipurpose bowl',category:'Tableware',spec:'600ml, 750ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'Soup Bowl',category:'Tableware',spec:'250ml',colors:'standard earthy shades',emoji:'🥣'},
+      {name:'Dip bowl',category:'Tableware',spec:'200ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'Curry Bowl',category:'Tableware',spec:'175ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'Flute Bowl',category:'Tableware',spec:'650ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'Kids multipurpose bowl',category:'Tableware',spec:'400ml',colors:'standard earthy shades',emoji:'🥣'},
+      {name:'Peel-clean bowl',category:'Tableware',spec:'430ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'Frosty mixing bowl',category:'Tableware',spec:'2000ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'Olive Salad Bowls',category:'Tableware',spec:'350ml, 850ml, 1550ml',colors:'Innocent, Sandcastle',emoji:'🥗'},
+      {name:'Verde bowl',category:'Tableware',spec:'300ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'RB Bowl',category:'Tableware',spec:'120ml, 175ml, 225ml, 300ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'Feline bowl',category:'Tableware',spec:'100g',colors:'Sandcastle',emoji:'🐱'},
+      {name:'Orbit anti-skid soup bowl',category:'Tableware',spec:'2L',colors:'Celeste, Innocent, Azure',emoji:'🥣'},
+      {name:'Flute Plate',category:'Tableware',spec:'9 inch',colors:'standard pastel shades',emoji:'🍽️'},
+      {name:'Dual color snack plate',category:'Tableware',spec:'6 inch',colors:'standard pastel shades',emoji:'🍽️'},
+      {name:'Kids serving plate',category:'Tableware',spec:'8 inch',colors:'standard pastel shades',emoji:'🍽️'},
+      {name:'Square snack plate',category:'Tableware',spec:'8 inch',colors:'standard pastel shades',emoji:'🍽️'},
+      {name:'Kids partition plate',category:'Tableware',spec:'8 inch',colors:'standard pastel shades',emoji:'🍽️'},
+      {name:'Round snack plate',category:'Tableware',spec:'6 inch',colors:'standard pastel shades',emoji:'🍽️'},
+      {name:'Picnic plate',category:'Tableware',spec:'10 inch',colors:'standard pastel shades',emoji:'🍽️'},
+      {name:'Verde Plate',category:'Tableware',spec:'8 inch',colors:'standard pastel shades',emoji:'🍽️'},
+      {name:'3 partition plate',category:'Tableware',spec:'8 inch',colors:'standard pastel shades',emoji:'🍽️'},
+      {name:'Square plate',category:'Tableware',spec:'9 inch, 11 inch',colors:'standard pastel shades',emoji:'🍽️'},
+      {name:'6 partition plate',category:'Tableware',spec:'14 inch',colors:'standard pastel shades',emoji:'🍽️'},
+      {name:'4 Partition plate',category:'Tableware',spec:'12 inch',colors:'standard pastel shades',emoji:'🍽️'},
+      {name:'FV Dinner Plate',category:'Tableware',spec:'8 inch, 11 inch',colors:'standard pastel colors',emoji:'🍽️'},
+      {name:'Kittykat kids plate',category:'Tableware',spec:'100g',colors:'Sand Castle',emoji:'🍽️'},
+      {name:'Rimora Serving Tray',category:'Tableware',spec:'15 inch',colors:'Coffee, Sand castle',emoji:'🍱'},
+      {name:'Greet Tray',category:'Tableware',spec:'12 inch',colors:'standard pastel shades',emoji:'🍱'},
+      {name:'Serving bowl with lid',category:'Tableware',spec:'1250ml, 2500ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'Sort Easy Tray',category:'Tableware',spec:'100g',colors:'standard pastel shades',emoji:'🍱'},
+      {name:'Cafeteria serving tray',category:'Tableware',spec:'17 inch',colors:'coffee, sand castle',emoji:'🍱'},
+      {name:'Serving bowl with steel',category:'Tableware',spec:'500ml, 750ml, 1000ml',colors:'standard pastel shades',emoji:'🥣'},
+      {name:'Travel cutlery set',category:'Tableware',spec:'8 inch, 6 inch',colors:'standard pastel shades',emoji:'🥄'},
+      {name:'Round canister',category:'Storage',spec:'800ml',colors:'tortilla, charcoal, sand castle',emoji:'🫙'},
+      {name:'Square canisters with prints',category:'Storage',spec:'750ml',colors:'sand castle',emoji:'🫙'},
+      {name:'Naturebox container',category:'Storage',spec:'600ml, 1200ml, 1800ml, 2400ml',colors:'standard earthy shades',emoji:'📦'},
+      {name:'Bread Box',category:'Storage',spec:'6000ml',colors:'sand castle',emoji:'📦'},
+      {name:'Square canister',category:'Storage',spec:'2000ml',colors:'tortilla, sand castle',emoji:'🫙'},
+      {name:'Egg tray',category:'Storage',spec:'6 slots',colors:'sand castle',emoji:'🥚'},
+      {name:'Ecosnack Container',category:'Storage',spec:'500ml',colors:'standard earthy shades',emoji:'📦'},
+      {name:'Green Space',category:'Storage',spec:'350ml',colors:'Multi-Dark',emoji:'📦'},
+      {name:'Terra bowl with lid',category:'Storage',spec:'600ml, 1200ml, 2200ml',colors:'sand castle with coral',emoji:'🫙'},
+      {name:'Ecovue bowl with lid',category:'Storage',spec:'2100ml',colors:'azure and sand castle',emoji:'🫙'},
+      {name:'Storage basket',category:'Storage',spec:'3800ml',colors:'standard pastel shades',emoji:'🧺'},
+      {name:'Loopac',category:'Storage',spec:'assorted',colors:'Multi Light, Multi Dark',emoji:'🧺'},
+      {name:'Storage bowl with lid',category:'Storage',spec:'1600ml, 2900ml',colors:'tortilla and sand castle',emoji:'🫙'},
+      {name:'Storage bowl with steel',category:'Storage',spec:'2000ml, 3000ml',colors:'sand castle and tortilla',emoji:'🫙'},
+      {name:'Greenhive basket with lid',category:'Storage',spec:'4800ml',colors:'standard pastel shades',emoji:'🧺'},
+      {name:'Soul-Snack Sandwich box',category:'Storage',spec:'850ml',colors:'sand castle',emoji:'🥪'},
+      {name:'Deco self-watering pot',category:'Planters',spec:'7, 9, 12, 14 inch',colors:'fern, coral, sand castle',emoji:'🪴'},
+      {name:'Daisy self-watering pot',category:'Planters',spec:'7, 9, 12, 14 inch',colors:'fern, coral, sand castle',emoji:'🪴'},
+      {name:'Aura pot with tray',category:'Planters',spec:'8, 10, 12 inch',colors:'tortilla, charcoal, sand castle',emoji:'🪴'},
+      {name:'Nile Planter',category:'Planters',spec:'9.5 inch',colors:'Sand castle, Azure, Celeste',emoji:'🪴'},
+      {name:'Bella square pot',category:'Planters',spec:'8, 10, 12, 14 inch',colors:'tortilla, sand castle',emoji:'🪴'},
+      {name:'Grow lite Planter',category:'Planters',spec:'13 inch',colors:'Sand Castle, Oriole, Charcoal',emoji:'🪴'},
+      {name:'Bella round pot',category:'Planters',spec:'8, 10, 12 inch',colors:'tortilla, sand castle',emoji:'🪴'},
+      {name:'Eval self-watering planter',category:'Planters',spec:'11.5 inch',colors:'standard pastel shades',emoji:'🪴'},
+      {name:'Regalia pot with tray',category:'Planters',spec:'12, 16, 19 inch',colors:'tortilla, charcoal, sand castle',emoji:'🪴'},
+      {name:'Linea pot with tray',category:'Planters',spec:'5.5, 7.5 inch',colors:'standard pastel shades',emoji:'🪴'},
+      {name:'Naturenest planter',category:'Planters',spec:'12 inch',colors:'standard pastel shades',emoji:'🪴'},
+      {name:'Leafy pot with tray',category:'Planters',spec:'8, 10, 12 inch',colors:'standard pastel shades',emoji:'🪴'},
+      {name:'Verona planter',category:'Planters',spec:'5, 7, 9, 13 inch',colors:'tortilla and sand castle',emoji:'🪴'},
+      {name:'Petal pot with tray',category:'Planters',spec:'7 inch',colors:'standard earthy shades',emoji:'🪴'},
+      {name:'Ecobloom self-watering pot',category:'Planters',spec:'4, 7 inch',colors:'standard earthy shades',emoji:'🪴'},
+      {name:'Duosling hook planter',category:'Planters',spec:'12 inch',colors:'standard earthy shades',emoji:'🪴'},
+      {name:'Ecosling self-watering pot',category:'Planters',spec:'10 inch',colors:'standard pastel shades',emoji:'🪴'},
+      {name:'Ace planter',category:'Planters',spec:'4, 7 inch',colors:'standard earthy shades',emoji:'🪴'},
+      {name:'Oreo tabletop pot',category:'Planters',spec:'4 inch',colors:'standard pastel shades',emoji:'🪴'},
+      {name:'Ecopod tabletop pot',category:'Planters',spec:'4 inch',colors:'standard earthy shades',emoji:'🪴'},
+      {name:'Metalsling self-watering pot',category:'Planters',spec:'10 inch',colors:'standard earthy shades',emoji:'🪴'},
+      {name:'Link planter',category:'Planters',spec:'5.5 inch',colors:'standard earthy shades',emoji:'🪴'},
+      {name:'Lush hanging planter',category:'Planters',spec:'7 inch',colors:'standard earthy shades',emoji:'🪴'},
+      {name:'Cypress planter',category:'Planters',spec:'10, 13, 16 inch',colors:'assorted',emoji:'🪴'},
+      {name:'Romano Planter',category:'Planters',spec:'5, 7 inch',colors:'Multi-light colors',emoji:'🪴'},
+      {name:'Verdant Planter',category:'Planters',spec:'12 inch',colors:'Sand Castle',emoji:'🪴'},
+      {name:'Archway planter',category:'Planters',spec:'8, 10, 12 inch',colors:'Multi Light Color',emoji:'🪴'},
+      {name:'Statement Table Top Planter',category:'Planters',spec:'4 inch',colors:'standard earthy shades',emoji:'🪴'},
+      {name:'Planter tray',category:'Planters',spec:'5.5 inch',colors:'standard earthy shades',emoji:'🪴'},
+      {name:'Planter stand',category:'Planters',spec:'8 inch',colors:'standard earthy shades',emoji:'🪴'},
+      {name:'Ecoblend bowl',category:'Petcare',spec:'400ml, 700ml, 1350ml, 2400ml',colors:'assorted',emoji:'🐾'},
+      {name:'Fountain bowl',category:'Petcare',spec:'450ml, 950ml',colors:'assorted',emoji:'🐾'},
+      {name:'Ecosteel Bowl - 2 in 1',category:'Petcare',spec:'400ml, 600ml',colors:'assorted',emoji:'🐾'},
+      {name:'Ecocog bowl',category:'Petcare',spec:'500ml, 750ml',colors:'assorted',emoji:'🐾'},
+      {name:'Greenpaws bowl',category:'Petcare',spec:'350ml, 650ml, 1200ml',colors:'assorted',emoji:'🐾'},
+      {name:'Maze bowl',category:'Petcare',spec:'400ml, 800ml, 1400ml, 2400ml',colors:'assorted',emoji:'🐾'},
+      {name:'Duo bowl - 2 in 1',category:'Petcare',spec:'350ml, 750ml, 1200ml',colors:'assorted',emoji:'🐾'},
+      {name:'Bella bowls',category:'Petcare',spec:'450ml, 750ml, 1600ml, 2500ml',colors:'assorted',emoji:'🐾'},
+      {name:'Key chains',category:'Sundry',spec:'multiple shapes',colors:'assorted',emoji:'🔑'},
+      {name:'Mobile stand',category:'Sundry',spec:'standard',colors:'earthy shades',emoji:'📱'},
+      {name:'S Keychain',category:'Sundry',spec:'standard',colors:'earthy shades',emoji:'🔑'},
+      {name:'Cotton Dispenser',category:'Sundry',spec:'standard',colors:'assorted',emoji:'🧴'},
+      {name:'Square coasters',category:'Sundry',spec:'standard',colors:'earthy shades',emoji:'🪵'},
+      {name:'Round coasters',category:'Sundry',spec:'standard',colors:'earthy shades',emoji:'🪵'},
+      {name:'Coaster Stand',category:'Sundry',spec:'standard',colors:'earthy shades',emoji:'🪵'},
+      {name:'Bathroom Essentials',category:'Sundry',spec:'assorted',colors:'assorted',emoji:'🛁'},
+      {name:'Scholistic chess set',category:'Sundry',spec:'standard',colors:'assorted',emoji:'♟️'},
+      {name:'Oyester soap box',category:'Sundry',spec:'standard',colors:'assorted',emoji:'🧼'},
+      {name:'Terra Toothbrush',category:'Sundry',spec:'standard',colors:'earthy shades',emoji:'🪥'},
+      {name:'Inspiration chess set',category:'Sundry',spec:'standard',colors:'assorted',emoji:'♟️'},
+      {name:'Accessories container',category:'Sundry',spec:'standard',colors:'earthy shades',emoji:'🗃️'},
+      {name:'Azure toothbrush',category:'Sundry',spec:'standard',colors:'earthy shades',emoji:'🪥'},
+      {name:'Palma Dispenser',category:'Sundry',spec:'standard',colors:'assorted',emoji:'🧴'},
+      {name:'Helma Organiser',category:'Sundry',spec:'standard',colors:'assorted',emoji:'🧺'}
+    ].map((p, index) => ({
+      ...p,
+      id: `${p.name.toLowerCase().replace(/[^a-z0-9]+/g,'-')}-${index}`,
+      price: 'Enquiry only',
+      description: `${p.name} is part of the MN Collections ${p.category.toLowerCase()} range, designed in eco-friendly biocomposite materials with ${p.colors}.`,
+    }));
+
+    const filters = ['All', ...new Set(products.map(p => p.category))];
+    const filterWrap = document.getElementById('filters');
+    const productGrid = document.getElementById('productGrid');
+    const searchInput = document.getElementById('searchInput');
+    const sortSelect = document.getElementById('sortSelect');
+    const drawer = document.getElementById('drawer');
+    const drawerTitle = document.getElementById('drawerTitle');
+    const drawerCategory = document.getElementById('drawerCategory');
+    const drawerDesc = document.getElementById('drawerDesc');
+    const drawerMeta = document.getElementById('drawerMeta');
+    const drawerEmoji = document.getElementById('drawerEmoji');
+    let activeFilter = 'All';
+
+    function renderFilters() {
+      filterWrap.innerHTML = filters.map(filter => `
+        <button class="filter-btn ${filter === activeFilter ? 'active' : ''}" data-filter="${filter}">${filter}</button>
+      `).join('');
+      filterWrap.querySelectorAll('[data-filter]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeFilter = btn.dataset.filter;
+          renderFilters();
+          renderProducts();
+        });
+      });
+    }
+
+    function sortProducts(items) {
+      const arr = [...items];
+      switch (sortSelect.value) {
+        case 'name-asc': return arr.sort((a,b) => a.name.localeCompare(b.name));
+        case 'name-desc': return arr.sort((a,b) => b.name.localeCompare(a.name));
+        case 'category': return arr.sort((a,b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name));
+        default: return arr;
+      }
+    }
+
+    function renderProducts() {
+      const q = searchInput.value.toLowerCase().trim();
+      const filtered = products.filter(product => {
+        const byFilter = activeFilter === 'All' || product.category === activeFilter;
+        const hay = `${product.name} ${product.category} ${product.spec} ${product.colors}`.toLowerCase();
+        return byFilter && hay.includes(q);
+      });
+      const sorted = sortProducts(filtered);
+      productGrid.innerHTML = sorted.map(product => `
+        <article class="card product-card">
+          <div class="product-media">
+            <div class="product-blob"><span>${product.emoji}</span></div>
+          </div>
+          <div class="product-body">
+            <div class="meta"><span class="tag">${product.category}</span><span class="tag">${product.spec}</span></div>
+            <div>
+              <h3>${product.name}</h3>
+              <p class="muted">${product.description}</p>
+            </div>
+            <div class="meta"><span class="tag">${product.colors}</span></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:.75rem;margin-top:auto">
+              <span class="price">${product.price}</span>
+              <button class="btn btn-secondary" data-product="${product.id}">View details</button>
+            </div>
+          </div>
+        </article>
+      `).join('');
+      productGrid.querySelectorAll('[data-product]').forEach(btn => {
+        btn.addEventListener('click', () => openDrawer(btn.dataset.product));
+      });
+    }
+
+    function openDrawer(id) {
+      const product = products.find(item => item.id === id);
+      if (!product) return;
+      drawerTitle.textContent = product.name;
+      drawerCategory.textContent = product.category;
+      drawerDesc.textContent = product.description;
+      drawerEmoji.textContent = product.emoji;
+      drawerMeta.innerHTML = `
+        <span class="tag">${product.spec}</span>
+        <span class="tag">${product.colors}</span>
+        <span class="tag">${product.price}</span>
+      `;
+      drawer.classList.add('open');
+      drawer.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      drawer.setAttribute('aria-hidden', 'true');
+    }
+
+    document.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeDrawer));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+    searchInput.addEventListener('input', renderProducts);
+    sortSelect.addEventListener('change', renderProducts);
+
+    const themeToggle = document.querySelector('[data-theme-toggle]');
+    (function(){
+      const root = document.documentElement;
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      function paint(){
+        root.setAttribute('data-theme', theme);
+        themeToggle.innerHTML = theme === 'dark'
+          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+      }
+      paint();
+      themeToggle.addEventListener('click', () => { theme = theme === 'dark' ? 'light' : 'dark'; paint(); });
+    })();
+
+    renderFilters();
+    renderProducts();
+  </script>
+</body>
+</html>
